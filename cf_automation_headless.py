@@ -18,17 +18,16 @@ driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), o
 
 
 def scrape_top_news():
-
     i = 0
     while i < 40:
         driver.get('https://fast.com')
-        sleep(15)
-        speed_number = driver.find_element_by_xpath('//*[@id="speed-value"]')
-        speed_name = driver.find_element_by_xpath('//*[@id="speed-units"]')
-        print(str(speed_number)+str(speed_name))
-        print(i)
+        sleep(9)
+        speed= driver.find_element_by_xpath('//*[@id="speed-value"]')
+        name= driver.find_element_by_xpath('//*[@id="speed-units"]')
+        speed_number = speed.text
+        speed_name = name.text
+        print(str(speed_number)+str(speed_name) + '  '+str(i))
         i += 1
-        
 
 if __name__ == '__main__':
     scrape_top_news()

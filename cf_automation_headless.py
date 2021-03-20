@@ -19,7 +19,7 @@ driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), o
 
 def scrape_top_news():
     i = 0
-    while i < 40:
+    while i < 5:
         driver.get('https://fast.com')
         sleep(9)
         speed= driver.find_element_by_xpath('//*[@id="speed-value"]')

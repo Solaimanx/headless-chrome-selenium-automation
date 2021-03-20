@@ -29,8 +29,8 @@ def scrape_top_news():
         print(str(speed_number)+str(speed_name) + '  '+str(i))
         i += 1
 
-if __name__ == '__main__':
-    scrape_top_news()
+
+scrape_top_news()
 
 
 

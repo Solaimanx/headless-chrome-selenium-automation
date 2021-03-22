@@ -35,7 +35,7 @@ logo_found = 0
 logo_didnt_found = 0
 seo_found = 0
 total = 0
-
+got_it = 0
 
 username ='info@ericniceberg.com'
 password = 'xJL3E6PJCQkj3yx'
@@ -57,6 +57,7 @@ def get_cookies():
 
 #login 
 def login_with_cookies():
+    global got_it
     driver.get('https://infoa9bf3f-app.clickfunnels.com/funnels/8212285/steps/50309042/overview')
     cookies = pickle.load(open("cookies.pkl", "rb"))
     for cookie in cookies:
@@ -66,23 +67,24 @@ def login_with_cookies():
     try :
         driver.find_element_by_xpath('//a[contains(text(),"Got it!")]').click()
     except:
-        print("Not able to click on |Got it|")
+        got_it += 1
     sleep(10)
 
 
 def change_image(link):
+    global got_it
     global logo_found
     global logo_didnt_found
     driver.get(link)
     #Click "edit Page"
-    sleep(5)
+    sleep(4)
     try :
         driver.find_element_by_xpath('//a[contains(text(),"Got it!")]').click()
     except:
-        print("Not able to click on |Got it|")
-    sleep(5)
+        got_it += 1
+    sleep(4)
     driver.find_element_by_xpath("(//a[contains(@class,'btn btn-warning openPageInEditor')])[1]").click()
-    sleep(10)
+    sleep(13)
     #check if there are any logo
     #b1
     try:
@@ -103,7 +105,7 @@ def change_image(link):
         driver.find_element_by_xpath('/html/body/div[68]/div[2]/div[2]/div[2]').click()
 
         logo_found += 1
-        sleep(10)
+        sleep(5)
     except:
         logo_didnt_found += 1
     #b2
@@ -125,7 +127,7 @@ def change_image(link):
         driver.find_element_by_xpath('/html/body/div[68]/div[2]/div[2]/div[2]').click()
 
         logo_found += 1
-        sleep(10)
+        sleep(5)
     except:
         logo_didnt_found += 1
     #w1
@@ -147,7 +149,7 @@ def change_image(link):
         driver.find_element_by_xpath('/html/body/div[68]/div[2]/div[2]/div[2]').click()
 
         logo_found += 1
-        sleep(10)
+        sleep(5)
     except:
         logo_didnt_found += 1
     #w2
@@ -169,7 +171,7 @@ def change_image(link):
         driver.find_element_by_xpath('/html/body/div[68]/div[2]/div[2]/div[2]').click()
 
         logo_found += 1
-        sleep(10)
+        sleep(5)
     except:
         logo_didnt_found += 1
     #w3
@@ -191,7 +193,7 @@ def change_image(link):
         driver.find_element_by_xpath('/html/body/div[68]/div[2]/div[2]/div[2]').click()
 
         logo_found += 1
-        sleep(10)
+        sleep(5)
     except:
         logo_didnt_found += 1
     #w4
@@ -213,7 +215,7 @@ def change_image(link):
         driver.find_element_by_xpath('/html/body/div[68]/div[2]/div[2]/div[2]').click()
 
         logo_found += 1
-        sleep(10)
+        sleep(5)
     except:
         logo_didnt_found += 1
         
@@ -269,7 +271,7 @@ def drag_and_drop():
     drog__drop.perform()
     #save
     driver.find_element_by_xpath('/html/body/div[68]/div[2]/div[2]/div[2]').click()
-    sleep(13)
+    sleep(7)
 
 
 
@@ -304,7 +306,7 @@ def seo_meta_tag():
     driver.find_element_by_xpath('/html/body/div[11]').click()
     driver.find_element_by_xpath('/html/body/div[68]/div[2]/div[2]/div[2]').click()
     seo_found += 1
-    sleep(10)
+    sleep(7)
 
 
 def collect_all_link():
@@ -336,7 +338,7 @@ def main():
         sleep(1)
     for page_link in link_list:
         change_image(page_link)
-        seo_meta_tag()
+        # seo_meta_tag()
         footer_remove_and_add()
         total += 1
         print('___________________________________________')

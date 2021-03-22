@@ -13,8 +13,11 @@ import pickle
 chrome_options = webdriver.ChromeOptions()
 chrome_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
 chrome_options.add_argument("--headless")
+chrome_options.add_argument("start-maximized")
 chrome_options.add_argument("--disable-dev-shm-usage")
 chrome_options.add_argument("--no-sandbox")
+chrome_options.add_experimental_option("excludeSwitches", ["enable-automation"])
+chrome_options.add_experimental_option('useAutomationExtension', False)
 driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), options=chrome_options)
 
 #code start here
@@ -42,7 +45,7 @@ def get_cookies():
     driver.find_element_by_xpath('//*[@id="user_password"]').send_keys(password)
     driver.find_element_by_xpath('//*[@id="user_remember_me"]').click()
     driver.find_element_by_xpath('//*[@id="loginfields"]/div[4]/input').click()
-    # pickle.dump( driver.get_cookies() , open("cookies.pkl","wb"))
+    pickle.dump( driver.get_cookies() , open("cookies.pkl","wb"))
     driver.get('https://infoa9bf3f-app.clickfunnels.com/funnels/8212285/steps/50309042/overview')
     print('store the chookies successfully')
     sleep(8)

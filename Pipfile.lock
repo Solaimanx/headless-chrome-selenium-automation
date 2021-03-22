@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "4fa236ca8247798668326654c307a9cb9ff90a937c42d1496925fc89cd407792"
+            "sha256": "e9e867d81e21ff6cb32ad8bda4542e816f3820f83faa1d4d691a80d6d3ba75fc"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -16,20 +16,6 @@
         ]
     },
     "default": {
-        "clipboard": {
-            "hashes": [
-                "sha256:a72a78e9c9bf68da1c3f29ee022417d13ec9e3824b511559fd2b702b1dd5b817"
-            ],
-            "index": "pypi",
-            "version": "==0.0.4"
-        },
-        "pyperclip": {
-            "hashes": [
-                "sha256:105254a8b04934f0bc84e9c24eb360a591aaf6535c9def5f29d92af107a9bf57"
-            ],
-            "index": "pypi",
-            "version": "==1.8.2"
-        },
         "selenium": {
             "hashes": [
                 "sha256:2d7131d7bc5a5b99a2d9b04aaf2612c411b03b8ca1b1ee8d3de5845a9be2cb3c",
@@ -45,13 +31,6 @@
             ],
             "markers": "python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3, 3.4' and python_version < '4'",
             "version": "==1.26.4"
-        },
-        "xerox": {
-            "hashes": [
-                "sha256:1b598ed4ba017374f02e9cef983febdd19dba79a5301856fdba985c490b14325"
-            ],
-            "index": "pypi",
-            "version": "==0.4.1"
         }
     },
     "develop": {}

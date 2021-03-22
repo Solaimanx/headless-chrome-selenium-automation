@@ -36,7 +36,7 @@ password = 'xJL3E6PJCQkj3yx'
 
 #get cookis from website
 def get_cookies():
-    driver.get('https://infoa9bf3f-app.clickfunnels.com/funnels/8212285/steps/50309042/overview')
+    driver.get('https://infoa9bf3f-app.clickfunnels.com/users/sign_in')
     driver.find_element_by_xpath('//*[@id="user_email"]').send_keys(username)
     driver.find_element_by_xpath('//*[@id="user_password"]').send_keys(password)
     driver.find_element_by_xpath('//*[@id="user_remember_me"]').click()

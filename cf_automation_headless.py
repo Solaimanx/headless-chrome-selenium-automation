@@ -1,4 +1,6 @@
 import os
+import clipboard
+import pyperclip
 import xerox
 from time import sleep
 from selenium import webdriver
@@ -22,7 +24,7 @@ driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), o
 
 driver.get('http://google.com/')
 search = driver.find_element_by_xpath('/html/body/div[1]/div[3]/form/div[1]/div[1]/div[1]/div/div[2]/input')
-xerox.copy(" קונפידנס - לדבר אנגלית, לא לגמגם. ")
+pyperclip.copy(" קונפידנס - לדבר אנגלית, לא לגמגם. ")
 search.click()
 sleep(2)
 search.send_keys(Keys.CONTROL,'v')

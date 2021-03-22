@@ -315,6 +315,7 @@ def main():
     login_with_cookies()
     collect_all_link()
     print('collected all link')
+    print(link_list)
     # try:
     #     link_list.remove('https://infoa9bf3f-app.clickfunnels.com')
     # except:

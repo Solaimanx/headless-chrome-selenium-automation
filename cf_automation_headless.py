@@ -31,6 +31,7 @@ search_button = driver.find_element_by_xpath('/html/body/div[1]/div[3]/form/div[
 search_button.click()
 sleep(3)
 driver.save_screenshot("screenshot.png")
+print('done check the screenshort')
 
 
 

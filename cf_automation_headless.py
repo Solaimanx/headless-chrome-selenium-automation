@@ -310,22 +310,22 @@ def collect_all_link():
 
 def main():
     global total
-    # get_cookies()
-    login_with_cookies()
+    get_cookies()
+    # login_with_cookies()
     collect_all_link()
     print('collected all link')
-    try:
-        link_list.remove('https://infoa9bf3f-app.clickfunnels.com')
-    except:
-        sleep(1)
-    for page_link in link_list:
-        change_image(page_link)
-        seo_meta_tag()
-        footer_remove_and_add()
-        total += 1
-        print('_____________________________________________')
-        print('Pages check done =======>  '+ str(total))
-        print('Logo added =====> '+str(logo_found)+ '\n' +'Logo checked found  =====> '+str(logo_didnt_found) + '\n'+ 'footer added =====> '+str(footer_found)+'\n'+ 'Foodter didn\'t found  =====> '+ str(footer_didnt_found) +'\n' +'SEO added =====> '+str(seo_found))
+    # try:
+    #     link_list.remove('https://infoa9bf3f-app.clickfunnels.com')
+    # except:
+    #     sleep(1)
+    # for page_link in link_list:
+    #     change_image(page_link)
+    #     seo_meta_tag()
+    #     footer_remove_and_add()
+    #     total += 1
+    #     print('_____________________________________________')
+    #     print('Pages check done =======>  '+ str(total))
+    #     print('Logo added =====> '+str(logo_found)+ '\n' +'Logo checked found  =====> '+str(logo_didnt_found) + '\n'+ 'footer added =====> '+str(footer_found)+'\n'+ 'Foodter didn\'t found  =====> '+ str(footer_didnt_found) +'\n' +'SEO added =====> '+str(seo_found))
 
 
 

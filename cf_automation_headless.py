@@ -61,6 +61,10 @@ def login_with_cookies():
         driver.add_cookie(cookie)
     driver.get('https://infoa9bf3f-app.clickfunnels.com/funnels/8212285/steps/50309042/overview')
     print('login successfully')
+    try :
+        driver.find_element_by_xpath('//a[contains(text(),"Got it!")]').click()
+    except:
+        print("Not able to click on |Got it|")
     sleep(10)
 
 
@@ -69,7 +73,12 @@ def change_image(link):
     global logo_didnt_found
     driver.get(link)
     #Click "edit Page"
-    sleep(10)
+    sleep(5)
+    try :
+        driver.find_element_by_xpath('//a[contains(text(),"Got it!")]').click()
+    except:
+        print("Not able to click on |Got it|")
+    sleep(5)
     driver.find_element_by_xpath("(//a[contains(@class,'btn btn-warning openPageInEditor')])[1]").click()
     sleep(10)
     #check if there are any logo

@@ -12,7 +12,9 @@ import pickle
 # driver
 chrome_options = webdriver.ChromeOptions()
 chrome_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
+
 chrome_options.add_argument("--headless")
+chrome_options.add_argument("--window-size=1600,700")
 chrome_options.add_argument("start-maximized")
 chrome_options.add_argument("--disable-dev-shm-usage")
 chrome_options.add_argument(f'user-agent=Mozilla/5.0 (Windows NT 4.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2049.0 Safari/537.36')

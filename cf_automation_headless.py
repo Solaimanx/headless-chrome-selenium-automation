@@ -1,5 +1,5 @@
 import os
-import pyperclip
+import clipboard
 from time import sleep
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -22,7 +22,7 @@ driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), o
 
 driver.get('http://google.com/')
 search = driver.find_element_by_xpath('/html/body/div[1]/div[3]/form/div[1]/div[1]/div[1]/div/div[2]/input')
-pyperclip.copy(' קונפידנס - לדבר אנגלית, לא לגמגם. ')
+clipboard.copy(" קונפידנס - לדבר אנגלית, לא לגמגם. ")
 search.click()
 sleep(2)
 search.send_keys(Keys.CONTROL,'v')
@@ -30,6 +30,11 @@ sleep(3)
 search_button = driver.find_element_by_xpath('/html/body/div[1]/div[3]/form/div[1]/div[1]/div[3]/center/input[1]')
 search_button.click()
 sleep(3)
+driver.find_element_by_xpath('//*[@id="rso"]/div[2]/div[1]/div/div[1]/a/h3/span').click()
+sleep(4)
+text = driver.find_element_by_xpath('//*[@id="ArticleHeaderComponent"]/div[2]/h1')
+text_ = text.getText()
+print(text_)
 driver.save_screenshot("screenshot.png")
 print('done check the screenshort')
 

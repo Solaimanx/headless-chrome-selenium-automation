@@ -346,7 +346,7 @@ def main():
         print('Logo added =====> '+str(logo_found)+ '\n' +'Logo checked found  =====> '+str(logo_didnt_found) + '\n'+ 'footer added =====> '+str(footer_found)+'\n'+ 'Foodter didn\'t found  =====> '+ str(footer_didnt_found) +'\n' +'SEO added =====> '+str(seo_found))
     for i in range(100):
         print(i)
-    sleep(259200)
+    sleep(260200)
 
 
 #start here

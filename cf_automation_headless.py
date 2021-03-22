@@ -56,7 +56,7 @@ def login_with_cookies():
         driver.add_cookie(cookie)
     driver.get('https://infoa9bf3f-app.clickfunnels.com/funnels/8212285/steps/50309042/overview')
     print('login successfully')
-    sleep(4)
+    sleep(10)
 
 
 def change_image(link):
@@ -310,8 +310,8 @@ def collect_all_link():
 
 def main():
     global total
-    get_cookies()
-    # login_with_cookies()
+    # get_cookies()
+    login_with_cookies()
     collect_all_link()
     print('collected all link')
     # try:
@@ -331,14 +331,3 @@ def main():
 
 #start here
 main()
-
-
-
-
-
-
-
-
-
-
-

@@ -5,7 +5,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-
+import pickle
 
 
 # driver
@@ -310,8 +310,8 @@ def collect_all_link():
 
 def main():
     global total
-    get_cookies()
-    # login_with_cookies()
+    # get_cookies()
+    login_with_cookies()
     collect_all_link()
     print('collected all link')
     try:

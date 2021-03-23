@@ -332,8 +332,8 @@ def collect_all_link():
 
 def main():
     global total
-    # get_cookies()
-    login_with_cookies()
+    get_cookies()
+    # login_with_cookies()
     collect_all_link()
     print('collected all link')
     try:

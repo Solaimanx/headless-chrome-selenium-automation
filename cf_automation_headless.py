@@ -22,6 +22,7 @@ chrome_options.add_argument("--no-sandbox")
 chrome_options.add_experimental_option("excludeSwitches", ["enable-automation"])
 chrome_options.add_experimental_option('useAutomationExtension', False)
 driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), options=chrome_options)
+driver.implicitly_wait(25)
 
 #code start here
 

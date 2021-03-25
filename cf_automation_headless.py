@@ -86,7 +86,8 @@ def change_image(link):
     #Click "edit Page"
     sleep(10)
     next_button = driver.find_element_by_xpath("//a[contains(@class,'btn btn-warning openPageInEditor')])[1]")
-    driver.execute_script("arguments[0].click()",next_button)
+    next_button.click()
+    # driver.execute_script("arguments[0].click()",next_button)
 
     sleep(9)
     #check if there are any logo
@@ -114,7 +115,8 @@ def change_image(link):
             sleep(1)
             # driver.find_element_by_xpath('/html/body/div[68]/div[2]/div[2]/div[2]').click()
             save__ = driver.find_element_by_xpath('/html/body/div[68]/div[2]/div[2]/div[2]')
-            driver.execute_script("arguments[0].click()",save__)
+            # driver.execute_script("arguments[0].click()",save__)
+            save__.click()
 
             logo_found += 1
         except:
@@ -141,7 +143,8 @@ def change_image(link):
                 sleep(1)
                 # driver.find_element_by_xpath('/html/body/div[68]/div[2]/div[2]/div[2]').click()
                 save__ = driver.find_element_by_xpath('/html/body/div[68]/div[2]/div[2]/div[2]')
-                driver.execute_script("arguments[0].click()",save__)
+                # driver.execute_script("arguments[0].click()",save__)
+                save__.click()
 
                 logo_found += 1
 
@@ -168,7 +171,8 @@ def change_image(link):
                     sleep(1)
                     # driver.find_element_by_xpath('/html/body/div[68]/div[2]/div[2]/div[2]').click()
                     save__ = driver.find_element_by_xpath('/html/body/div[68]/div[2]/div[2]/div[2]')
-                    driver.execute_script("arguments[0].click()",save__)
+                    # driver.execute_script("arguments[0].click()",save__)
+                    save__.click()
 
                     logo_found += 1
                 except:
@@ -195,7 +199,8 @@ def change_image(link):
                         sleep(1)
                         # driver.find_element_by_xpath('/html/body/div[68]/div[2]/div[2]/div[2]').click()
                         save__ = driver.find_element_by_xpath('/html/body/div[68]/div[2]/div[2]/div[2]')
-                        driver.execute_script("arguments[0].click()",save__)
+                        # driver.execute_script("arguments[0].click()",save__)
+                        save__.click()
 
                         logo_found += 1
 
@@ -223,7 +228,8 @@ def change_image(link):
                             sleep(1)
                             # driver.find_element_by_xpath('/html/body/div[68]/div[2]/div[2]/div[2]').click()
                             save__ = driver.find_element_by_xpath('/html/body/div[68]/div[2]/div[2]/div[2]')
-                            driver.execute_script("arguments[0].click()",save__)
+                            # driver.execute_script("arguments[0].click()",save__)
+                            save__.click()
 
                             logo_found += 1
 
@@ -250,7 +256,8 @@ def change_image(link):
                                 sleep(1)
                                 # driver.find_element_by_xpath('/html/body/div[68]/div[2]/div[2]/div[2]').click()
                                 save__ = driver.find_element_by_xpath('/html/body/div[68]/div[2]/div[2]/div[2]')
-                                driver.execute_script("arguments[0].click()",save__)
+                                # driver.execute_script("arguments[0].click()",save__)
+                                save__.click()
 
                                 logo_found += 1
 

@@ -112,10 +112,12 @@ def change_image(link):
             go_back = driver.find_element_by_xpath('/html/body/div[11]').click()
             # driver.execute_script("arguments[0],click()",go_back)
             # ActionChains(driver).move_by_offset(-70,20).click().perform()
-            sleep(1)
+            sleep(3)
             # driver.find_element_by_xpath('/html/body/div[68]/div[2]/div[2]/div[2]').click()
             save__ = driver.find_element_by_xpath('/html/body/div[68]/div[2]/div[2]/div[2]')
             # driver.execute_script("arguments[0].click()",save__)
+            save__.click()
+            sleep(5)
             save__.click()
 
             logo_found += 1
@@ -140,10 +142,12 @@ def change_image(link):
                 go_back = driver.find_element_by_xpath('/html/body/div[11]').click()
                 # driver.execute_script("arguments[0],click()",go_back)
                 # ActionChains(driver).move_by_offset(-70,20).click().perform()
-                sleep(1)
+                sleep(3)
                 # driver.find_element_by_xpath('/html/body/div[68]/div[2]/div[2]/div[2]').click()
                 save__ = driver.find_element_by_xpath('/html/body/div[68]/div[2]/div[2]/div[2]')
                 # driver.execute_script("arguments[0].click()",save__)
+                save__.click()
+                sleep(5)
                 save__.click()
 
                 logo_found += 1
@@ -168,10 +172,12 @@ def change_image(link):
                     go_back = driver.find_element_by_xpath('/html/body/div[11]').click()
                     # driver.execute_script("arguments[0],click()",go_back)
                     # ActionChains(driver).move_by_offset(-70,20).click().perform()
-                    sleep(1)
+                    sleep(3)
                     # driver.find_element_by_xpath('/html/body/div[68]/div[2]/div[2]/div[2]').click()
                     save__ = driver.find_element_by_xpath('/html/body/div[68]/div[2]/div[2]/div[2]')
                     # driver.execute_script("arguments[0].click()",save__)
+                    save__.click()
+                    sleep(5)
                     save__.click()
 
                     logo_found += 1
@@ -196,10 +202,12 @@ def change_image(link):
                         go_back = driver.find_element_by_xpath('/html/body/div[11]').click()
                         # driver.execute_script("arguments[0],click()",go_back)
                         # ActionChains(driver).move_by_offset(-70,20).click().perform()
-                        sleep(1)
+                        sleep(3)
                         # driver.find_element_by_xpath('/html/body/div[68]/div[2]/div[2]/div[2]').click()
                         save__ = driver.find_element_by_xpath('/html/body/div[68]/div[2]/div[2]/div[2]')
                         # driver.execute_script("arguments[0].click()",save__)
+                        save__.click()
+                        sleep(5)
                         save__.click()
 
                         logo_found += 1
@@ -225,10 +233,12 @@ def change_image(link):
                             go_back = driver.find_element_by_xpath('/html/body/div[11]').click()
                             # driver.execute_script("arguments[0],click()",go_back)
                             # ActionChains(driver).move_by_offset(-70,20).click().perform()
-                            sleep(1)
+                            sleep(3)
                             # driver.find_element_by_xpath('/html/body/div[68]/div[2]/div[2]/div[2]').click()
                             save__ = driver.find_element_by_xpath('/html/body/div[68]/div[2]/div[2]/div[2]')
                             # driver.execute_script("arguments[0].click()",save__)
+                            save__.click()
+                            sleep(5)
                             save__.click()
 
                             logo_found += 1
@@ -253,10 +263,12 @@ def change_image(link):
                                 go_back = driver.find_element_by_xpath('/html/body/div[11]').click()
                                 # driver.execute_script("arguments[0],click()",go_back)
                                 # ActionChains(driver).move_by_offset(-70,20).click().perform()
-                                sleep(1)
+                                sleep(3)
                                 # driver.find_element_by_xpath('/html/body/div[68]/div[2]/div[2]/div[2]').click()
                                 save__ = driver.find_element_by_xpath('/html/body/div[68]/div[2]/div[2]/div[2]')
                                 # driver.execute_script("arguments[0].click()",save__)
+                                save__.click()
+                                sleep(5)
                                 save__.click()
 
                                 logo_found += 1
@@ -387,10 +399,11 @@ def main():
         # seo_meta_tag()
         # footer_remove_and_add()
         total += 1
-        print(page_link)
+
         print('___________________________________________')
         print('Pages check done =======>  '+ str(total))
         print('Logo added =====> '+str(logo_found)+ '\n' +'Logo checked found  =====> '+str(logo_didnt_found) )
+        print(page_link)
 
 
 #start here

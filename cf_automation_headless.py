@@ -84,9 +84,8 @@ def change_image(link):
     global logo_didnt_found
     driver.get(link)
     #Click "edit Page"
-    sleep(7)
-    wait = WebDriverWait(driver,15)
-    next_button = wait.until(EC.element_to_be_clickable((By.XPATH, "(//a[contains(@class,'btn btn-warning openPageInEditor')])[1]")))
+    sleep(10)
+    next_button = find_element_by_xpath("//a[contains(@class,'btn btn-warning openPageInEditor')])[1]")
     driver.execute_script("arguments[0].click()",next_button)
 
     sleep(9)

@@ -85,7 +85,7 @@ def change_image(link):
     driver.get(link)
     #Click "edit Page"
     sleep(10)
-    next_button = find_element_by_xpath("//a[contains(@class,'btn btn-warning openPageInEditor')])[1]")
+    next_button = driver.find_element_by_xpath("//a[contains(@class,'btn btn-warning openPageInEditor')])[1]")
     driver.execute_script("arguments[0].click()",next_button)
 
     sleep(9)
